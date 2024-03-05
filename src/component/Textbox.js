@@ -79,7 +79,7 @@ export default function Textbox(props) {
       
       <div className="container">
         <h1 className='my-2'>Your text summary</h1>
-        <p>{text.split(' ').filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+        <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
         <p>{(0.008 * (text.split(' ').length)).toFixed(2)} Minutes to read</p>
         <h3>Preview</h3>
         <p>{text}</p>
